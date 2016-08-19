@@ -1,0 +1,31 @@
+<%= params %>
+<h1>New Application</h1>
+<div class="row">
+  <div class="col-md-4">
+    <p>Guidelines for posts</p>
+    <ul>
+      <li>No Porn</li>
+      <li>No Dodgers</li>
+      <li>No Lakers</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <%= form_for @app do |f| %>
+
+      <div class="form_group" >
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form form-control' %>
+      </div >
+
+      <div class="form_group" >
+        <%= f.label :url %>
+        <%= f.text_area :url, class: 'form form-control' %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.submit "Submit", class: 'btn btn-success' %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

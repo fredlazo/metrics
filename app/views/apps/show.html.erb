@@ -1,0 +1,12 @@
+
+<h1><%= @app.name %></h1>
+
+<%= pie_chart @app.events.group(:name).count %>
+
+<%= line_chart @app.events.group_by_day(:created_at).count %>
+
+<ul>
+<% @events.each do |event| %>
+  <li><%= event[0] %>: <%= event[1].size %></li>
+<% end %>
+</ul>

@@ -1,0 +1,14 @@
+<h1>Applications</h1>
+
+<% @apps.each do |app| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to app.name, app_path(app) %>
+      </h4>
+      <%= link_to "Edit", edit_app_path(app) %> |
+      <%= link_to "Delete", app, method: :delete %>
+    </div>
+  </div>
+
+<% end %>
