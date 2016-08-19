@@ -3,6 +3,7 @@
 
 <%= pie_chart @app.events.group(:name).count %>
 
+<%= line_chart @app.events.group_by_day(:created_at).count %>
 
 <ul>
 <% @events.each do |event| %>
